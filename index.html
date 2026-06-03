@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Huskit</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="auth" class="auth-screen">
+    <section class="auth-panel login-view active" data-auth-view="login">
+      <div class="auth-copy">
+        <h1>Huskit</h1>
+        <p>Helping students track applications, deadlines, and next steps across platforms - all in one place.</p>
+        <h2>Login</h2>
+        <label>Email</label>
+        <input type="email" placeholder="username@gmail.com">
+        <label>Password</label>
+        <div class="password-row">
+          <input type="password" placeholder="Password">
+          <span>show</span>
+        </div>
+        <button class="primary wide" data-enter-app>Sign in</button>
+        <span class="forgot">Forgot Password?</span>
+        <div class="divider">or continue with</div>
+        <div class="social-row">
+          <button title="Google">G</button>
+          <button title="GitHub">GH</button>
+          <button title="LinkedIn">in</button>
+        </div>
+        <p class="switch-auth">Don't have an account yet? <button data-auth-target="register">Register for free</button></p>
+      </div>
+      <div class="brand-art" aria-hidden="true">
+        <img class="uw-husky" src="assets/uw_husky_cutout.png" alt="">
+      </div>
+    </section>
+
+    <section class="auth-panel register-view" data-auth-view="register">
+      <div class="register-backdrop">
+        <img class="watermark-husky" src="assets/uw_husky_cutout.png" alt="">
+        <div class="register-card">
+          <div class="register-left">
+            <h1>Huskit</h1>
+            <p>Helping students track applications, deadlines, and next steps across platforms - all in one place.</p>
+            <h2>Register</h2>
+            <nav class="steps">
+              <button class="active" type="button" data-register-step="personal">Personal Information</button>
+              <button type="button" data-register-step="academic">Academic Details</button>
+              <button type="button" data-register-step="demographic">Demographic Details</button>
+            </nav>
+            <div class="register-step active" data-register-panel="personal">
+              <label>Full Name</label><input value="Narendra Singh">
+              <label>Mobile No</label><input value="9898252510">
+              <label>E-mail</label><input placeholder="username@gmail.com">
+              <label>Password</label><input placeholder="Password" type="password">
+              <label>Confirm Password</label><input placeholder="Password" type="password">
+            </div>
+            <div class="register-step" data-register-panel="academic">
+              <label>School</label><input value="University of Washington">
+              <label>Major</label><input placeholder="Informatics, Computer Science, Business...">
+              <label>Graduation Year</label><input placeholder="2027">
+              <label>Career Interest</label><input placeholder="Software Engineering, Product, UX Design...">
+              <label>Target Role</label><input placeholder="Software Engineering Intern">
+            </div>
+            <div class="register-step" data-register-panel="demographic">
+              <label>Student Status</label><input placeholder="Domestic student, international student...">
+              <label>Work Authorization</label><input placeholder="F-1 CPT/OPT, U.S. citizen, permanent resident...">
+              <label>Preferred Location</label><input placeholder="Seattle, Bay Area, Remote...">
+              <label>Application Goal</label><input placeholder="50 applications before September">
+              <label>Support Needs</label><input placeholder="Interview prep, OA practice, networking...">
+            </div>
+          </div>
+          <div class="register-right">
+            <h3>Profile Picture</h3>
+            <div class="avatar-large" aria-label="Default profile picture"><span></span></div>
+            <button class="primary small">Upload Image</button>
+            <div class="or">or</div>
+            <strong>Select Avatar</strong>
+            <div class="avatar-picks">
+              <img src="assets/p02_01_X9.png" alt="Avatar option">
+              <img src="assets/p02_04_X11.png" alt="Avatar option">
+              <img src="assets/p02_10_X10.png" alt="Avatar option">
+              <img src="assets/p02_12_X6.png" alt="Avatar option">
+            </div>
+          </div>
+          <div class="register-actions">
+            <button class="secondary" type="button" data-register-prev>Back</button>
+            <button class="primary" type="button" data-register-next>Next</button>
+            <button class="primary hidden" data-enter-app type="button" data-register-submit>Register</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <main id="app" class="app-shell hidden">
+    <aside class="sidebar">
+      <div class="window-dots"><span></span><span></span><span></span></div>
+      <h1>Huskit</h1>
+      <nav class="main-nav">
+        <button class="active" data-page="home"><span>⌂</span>Home</button>
+        <button data-page="applications"><span>▤</span>Applications</button>
+        <button data-page="metrics"><span>◔</span>My Metrics</button>
+      </nav>
+      <nav class="utility-nav">
+        <button>About Us</button>
+        <button>Settings</button>
+        <button>Help & Getting Started</button>
+        <button data-logout>Log Out</button>
+      </nav>
+    </aside>
+
+    <section class="workspace">
+      <header class="topbar">
+        <div class="search">⌕ <span>Search</span></div>
+        <button class="profile" title="Profile">♙</button>
+      </header>
+
+      <section class="page active" data-page-view="home">
+        <div class="dashboard-grid">
+          <section class="main-column">
+            <article class="goal-card">
+              <h2>My goals</h2>
+              <p>I want to be a <strong>Software Engineering Intern at Google, Meta, Amazon for Summer 2027</strong> by submitting <strong>50 applications</strong> and having <strong>20 coffee chats!</strong></p>
+            </article>
+            <article class="next-step">
+              <div>
+                <h2>Upcoming Next Step for You</h2>
+                <h3>Software Engineering Intern @ Microsoft</h3>
+                <p>Prepare behavioral questions and review system design basics.</p>
+                <strong>Next Stage: Final Interview</strong>
+                <button>↗ View Details / Add Notes</button>
+              </div>
+              <div class="time-badge">
+                <span>May 12</span>
+                <small>30 minutes<br>on Zoom</small>
+                <strong>12:00 PM</strong>
+              </div>
+            </article>
+            <section class="jobs-section">
+              <h2>Recommended Jobs</h2>
+              <div class="job-row" id="jobRow"></div>
+            </section>
+            <section class="advice-section">
+              <h2>Advice for you based on metrics</h2>
+              <div class="advice-grid" id="adviceGrid"></div>
+            </section>
+          </section>
+          <aside class="right-rail">
+            <article class="metric-mini">
+              <header>
+                <div class="metric-title"><span class="oa-icon">◷</span><h3>Online Assessments</h3></div>
+                <span class="status-pill warning">Below Average</span>
+              </header>
+              <div class="metric-number"><strong>2</strong><span>assessments</span></div>
+              <div class="peer-row"><span>You: <b>2</b></span><span>Peers: <b>3</b></span></div>
+              <hr>
+              <p><b>What this means:</b></p>
+              <p>You're receiving fewer OAs than average. This could mean you're advancing directly to interviews or applying to fewer OA-heavy roles.</p>
+              <p><b>To improve:</b> Practice coding challenges on LeetCode/HackerRank if targeting tech roles.</p>
+            </article>
+            <article class="recent-card">
+              <h3>Recently viewed</h3>
+              <button>Common OA types, purpose, and ways to prepare ↗</button>
+              <button>Top tips for passing an OA in technical roles ↗</button>
+              <button>Interview preparation for SWE role ↗</button>
+            </article>
+          </aside>
+        </div>
+      </section>
+
+      <section class="page" data-page-view="applications">
+        <div class="submissions">
+          <header class="section-header">
+            <div><h2>My Submissions</h2><p>Track your applications and stay on top of every step.</p></div>
+            <button class="primary" id="addApplication">+ Add Application</button>
+          </header>
+          <div class="stat-row" id="submissionStats"></div>
+          <table>
+            <thead><tr><th>Position</th><th>Company</th><th>Date Applied</th><th>Status</th></tr></thead>
+            <tbody id="applicationsTable"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="page" data-page-view="metrics">
+        <section class="metrics-wrapper">
+          <article class="dub-summary">
+            <img class="mini-husky large" src="assets/p03_04_X16_transparent.png" alt="">
+            <h2>My current application status</h2>
+            <h3>Dub AI</h3>
+            <p>Currently, you have a solid response rate and number of interviews scheduled, congrats! Now, focus on interview preparation, consider making an appointment with career services in Handshake, or join a community to practice. Let's keep this momentum going!</p>
+            <button data-open-ai>...</button>
+          </article>
+          <div class="metrics-grid" id="metricsGrid"></div>
+        </section>
+      </section>
+    </section>
+
+    <button class="ask-dub" data-open-ai>
+      <img class="mini-husky" src="assets/p03_04_X16_transparent.png" alt="">
+      <strong>Ask Dub</strong>
+    </button>
+  </main>
+
+  <section id="aiModal" class="ai-modal hidden" aria-hidden="true">
+    <div class="ai-top">
+      <h1>Huskit</h1>
+      <div class="search">⌕ <span>Search</span></div>
+      <button>◌</button><button>⌕</button><button class="profile">♙</button>
+    </div>
+    <div class="ai-card">
+      <button class="close-ai" data-close-ai>×</button>
+      <div class="ai-left">
+        <img class="mini-husky large" src="assets/p03_04_X16_transparent.png" alt="">
+        <h2>Huskit AI</h2>
+        <img class="ghost-husky" src="assets/p03_04_X16_transparent.png" alt="">
+        <p id="aiIntro">With a 67% response rate, your resume is already standing out within the pool. This suggests that you've showcased your competence well and passed through ATS systems.</p>
+        <button class="prompt-chip">→ How is the response rate calculated?</button>
+        <button class="prompt-chip">→ What can I do to increase my response rate?</button>
+        <div class="composer">
+          <span>☰</span><input placeholder="Ask about your metrics or get advice..."><span>mic ↑</span>
+        </div>
+      </div>
+      <aside class="ai-insight" id="aiInsight"></aside>
+    </div>
+  </section>
+
+  <section id="applicationModal" class="form-modal hidden" aria-hidden="true">
+    <form class="form-card" id="applicationForm">
+      <button type="button" class="form-close" data-close-application>×</button>
+      <h2>Add Application</h2>
+      <p>Log a new role so Huskit can keep your progress, deadlines, and next steps in one place.</p>
+      <label>Position</label>
+      <input name="position" required value="Software Engineering Intern">
+      <label>Company</label>
+      <input name="company" required value="Google">
+      <label>Date Applied</label>
+      <input name="date" required value="June 2, 2026">
+      <label>Status</label>
+      <select name="status">
+        <option>Submitted</option>
+        <option>Under Review</option>
+        <option>OA</option>
+        <option>Initial call</option>
+        <option>Interview scheduled</option>
+        <option>Offer</option>
+        <option>OA rejected</option>
+      </select>
+      <button class="primary wide" type="submit">Save Application</button>
+    </form>
+  </section>
+
+  <div id="toast" class="toast hidden"></div>
+  <script src="app.js"></script>
+</body>
+</html>
